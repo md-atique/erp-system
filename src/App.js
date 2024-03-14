@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Layout from "./Components/shared/Layout";
 import Dashboard from './Components/Dashboard';
 import Products from './Components/Products';
@@ -7,7 +7,7 @@ import OrderCalendar from './Components/OrderCalendar';
 
 const App = () => {
   return (
-    <Router>
+    <HashRouter>
     <Routes>
       <Route path="/" element={<Layout />} >
         <Route index element={<Dashboard />} />
@@ -16,7 +16,7 @@ const App = () => {
         <Route path="orderCalendar" element={<OrderCalendar />} />
       </Route>
     </Routes>
-  </Router>
+  </HashRouter>
   );
 };
 
